@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Javascript</title>
+		<script>
+		
+			var numero1 = prompt('Digite o primeiro número: ');
+			var operacao = prompt('Digite a operação desejada: ');
+			var numero2 = prompt('Digite o segundo número: ');
+			var resultado = null;
+
+			function soma(a, b){
+				return parseInt(a) + parseInt(b);
+			}
+
+			function sub(a, b){
+				return a - b;
+			}
+
+			switch(operacao){
+				case 'soma':
+				resultado = soma(numero1, numero2);
+				break;
+				
+				case 'subtração':
+				resultado = sub(numero1, numero2);
+				break;
+
+				default:
+				alert('Digite uma operação válida!');
+				break;
+			}
+
+			if(resultado != null){
+				document.write('O resultado é: ' + resultado);
+			}
+
+		</script>
+		
+	</head>
+
+	<body>
+
+	</body>
+</html>

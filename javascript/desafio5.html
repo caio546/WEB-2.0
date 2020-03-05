@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Javascript</title>
+		<script>
+
+			function modificarBackgroundInput(cor){
+				document.getElementById('campo').style.background = cor;
+			}
+
+			function perderFoco(){
+				var valor = document.getElementById('campo').value;
+				if(valor.length < 3){
+					modificarBackgroundInput('#ff0000');
+				}
+				else{
+					modificarBackgroundInput('#00ff00');
+				}
+			}
+
+			
+
+		</script>
+		
+	</head>
+
+	<body>
+		<input type="text" onfocus="modificarBackgroundInput('yellow')" onblur="perderFoco()" id="campo">
+	</body>
+</html>
